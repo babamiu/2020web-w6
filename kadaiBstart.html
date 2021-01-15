@@ -81,23 +81,23 @@
 						
 						a[i] = -1; //既に選択されている要素を押してもunseiが書き変わらないようにする。
 					} else if (a[i] === 2) {
-						unsei.innerHTML = "今日の運勢は中吉でした！（" + touchNum + "回目）";
+						
 						h.textContent = "中吉!";
 						h.classList.add("good");
 						a[i] = -1;
-						touchNum++;
+						
 					} else if (a[i] === 1) {
-						unsei.innerHTML = "今日の運勢は小吉でした！（" + touchNum + "回目）";
+						
 						h.textContent = "小吉!";
 						h.classList.add("normal");
 						a[i] = -1;
-						touchNum++;
+						
 					} else if (a[i] === 0) {
-						unsei.innerHTML = "今日の運勢は凶でした...残念！（" + touchNum + "回目）";
+						
 						h.textContent = "凶!";
 						h.classList.add("bad");
 						a[i] = -1;
-						touchNum++;
+						
 					}
 				});
 			}
