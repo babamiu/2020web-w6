@@ -27,7 +27,7 @@
                           transform: scale(0.9);
                            }
 
-			
+        </style>
 	</head>
 	<body>
 		<h1 id="unsei">今日の運勢は！？</h1>
@@ -75,29 +75,21 @@
 				const h = h3s[i];
 				h.addEventListener("click", () => {
 					if (a[i] === 3) {
-						unsei.innerHTML = "今日の運勢は大吉でした！（" + touchNum + "回目）";
 						h.textContent = "大吉!";
-						h.classList.add("excellent");
-						touchNum++;
-						a[i] = -1; //既に選択されている要素を押してもunseiが書き変わらないようにする。
+						h.classList.add("大吉");
+						a[i] = -1; 
 					} else if (a[i] === 2) {
-						unsei.innerHTML = "今日の運勢は中吉でした！（" + touchNum + "回目）";
 						h.textContent = "中吉!";
-						h.classList.add("good");
+						h.classList.add("中吉");
 						a[i] = -1;
-						touchNum++;
 					} else if (a[i] === 1) {
-						unsei.innerHTML = "今日の運勢は小吉でした！（" + touchNum + "回目）";
 						h.textContent = "小吉!";
-						h.classList.add("normal");
+						h.classList.add("小吉");
 						a[i] = -1;
-						touchNum++;
 					} else if (a[i] === 0) {
-						unsei.innerHTML = "今日の運勢は凶でした...残念！（" + touchNum + "回目）";
 						h.textContent = "凶!";
-						h.classList.add("bad");
+						h.classList.add("凶");
 						a[i] = -1;
-						touchNum++;
 					}
 				});
 			}
